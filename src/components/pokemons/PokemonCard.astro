@@ -17,6 +17,12 @@ const imageSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprit
     { border: !isBig },
   ]}
 >
-  <img src={imageSrc} alt={name} />
-  <span>{name}</span>
+  <img
+    src={imageSrc}
+    alt={name}
+    class:list={[{ "w-16 h16": !isBig }, { "w-26 h-26": isBig }]}
+  />
+  <span class:list={["capitalize", { "text-4xl text-blue-300": isBig }]}
+    >#{id} {name}</span
+  >
 </a>
